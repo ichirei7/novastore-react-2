@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'novastore-react-2'
+                git branch: 'main', url: 'https://github.com/ichirei7/novastore-react-2.git'
             }
         }
 
@@ -42,10 +42,10 @@ pipeline {
 
     post {
         success {
-            echo '✅ Deployed successfully!'
+            echo '✅ Deployed successfully to Nginx!'
         }
         failure {
-            echo '❌ Build or deploy failed!'
+            echo '❌ Build or deployment failed!'
         }
     }
 }
