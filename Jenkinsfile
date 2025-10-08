@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        nodejs 'NodeJS_18'   // ✅ Matches the name you configured in Jenkins UI
+    }
+
     environment {
         DEPLOY_DIR = '/var/www/site'
     }
